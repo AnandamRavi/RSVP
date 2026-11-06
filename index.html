@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--
+=====================================================================
+  WEDDING WEBSITE SERVICE: LANDING PAGE
+=====================================================================
+  FILES:   index.html  = the words and structure (this file)
+           styles.css  = colours, fonts, spacing
+           sheet-to-site.html = the "sheet to site" animation
+  QUICK EDITS (search for "EDIT:" in this file to jump to each one):
+    1. Business name (RSVP) and tagline in the top bar
+    2. Headline and intro text in the hero
+    3. Your email address (the "mailto:" link in the Contact section)
+    4. Links and descriptions for your two example sites
+  Colours and fonts live at the top of styles.css.
+  The decorative art (garland, mandala, lotus, paisley) is stored at the
+  very bottom of this file and can be left alone.
+=====================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSVP | Indian wedding sites from a Google Sheet</title>
+<meta name="description" content="RSVP: Indian wedding sites from a Google Sheet. Built for multi-event weddings, where each guest sees only the events, invitations and RSVP forms meant for them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- ============ TOP BAR (stays fixed while scrolling) ============ -->
+<div class="topbar">
+  <svg class="garland" aria-hidden="true"><rect width="100%" height="46" fill="url(#gl)"/></svg>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <span class="mark">
+        <svg class="lot-nav" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg>
+        <span class="brand">
+          <!-- EDIT: your business name and the small tagline beneath it -->
+          <span class="mark-text">RSVP</span>
+          <span class="tagline">Indian wedding sites from a Google Sheet!</span>
+        </span>
+      </span>
+      <div class="links">
+        <a href="#how">How it works</a>
+        <a href="#why">Why this service</a>
+        <a href="#examples">Examples</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<!-- ============ HERO (first screen) ============ -->
+<header class="hero">
+  <div class="wash a"></div><div class="wash b"></div>
+  <svg class="mandala" viewBox="-100 -100 200 200" aria-hidden="true"><use href="#mandala" x="-100" y="-100" width="200" height="200"/></svg>
+  <div class="wrap">
+    <div class="hero-text">
+      <!-- EDIT: headline and short intro -->
+      <h1>Make your own complex, multi-event Indian wedding in a <em>heartbeat!</em></h1>
+      <p class="lede">Easy to use, quick to create, and easy to run. Fill in a Google Sheet, and your site builds itself.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Start my website</a>
+        <a class="btn btn-ghost" href="#examples">See live examples</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <div class="wrap cols">
+    <p class="pull">Update a Google Sheet with your content in the required columns, and voilà, your site is ready. It’s as simple as that.</p>
+    <div>
+      <p>The website itself is far from simple. Indian weddings are multi-event adventures, and you may not want to invite everyone to everything.</p>
+      <p>So how do you make sure the right people see only the relevant content? That each guest sees the right invitation and the right RSVP form? That’s some of the many things this website does for you.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ANIMATION: FROM A SHEET TO A SITE ============ -->
+<!-- The animation lives in its own file, sheet-to-site.html. Keep it in the same folder as this file. -->
+<section class="demo center" id="demo">
+  <div class="wrap">
+    <h2>From a sheet to a site, and back again</h2>
+    <div class="flourish" aria-hidden="true"><svg class="lot" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg></div>
+    <p>Watch a Google Sheet turn into the pages your guests see, then see their replies come back to the sheet.</p>
+    <div class="demo-frame">
+      <iframe id="demoFrame" src="sheet-to-site.html" title="Animation: a Google Sheet turns into a wedding website" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS (4 steps, the "every guest" box, and embed list) ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="head center">
+      <h2>How does it work?</h2>
+      <div class="flourish" aria-hidden="true"><svg class="lot" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg></div>
+      <p>You fill in a spreadsheet. The site makes itself.</p>
+    </div>
+    <!-- EDIT: each <li> is one step. Copy a whole <li>...</li> to add another. -->
+    <ol class="steps">
+      <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span><h3>Tell me your names</h3><p>Send me the names of the couple. I create the shell of your website and give you the Google Sheet template.</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><h3>Get a quick walkthrough</h3><p>The sheet has all the instructions you need. I’ll also hop on a call and take you through the basics.</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M10 4v16"/></svg></span><h3>Add your content</h3><p>Fill everything into the sheet. Upload images to Google Drive, make them accessible to anyone with the link, and paste that link into the sheet.</p></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5"/><path d="M3.5 12h17"/></svg></span><h3>Your site is live</h3><p>The site builds itself from what’s in the sheet. Change the sheet, and the site follows.</p></li>
+    </ol>
+
+    <!-- "Every guest sees what they are invited to" box -->
+    <div class="private">
+      <svg class="card-art" viewBox="0 0 64 84" aria-hidden="true"><rect x="3" y="3" width="58" height="78" rx="6" fill="rgba(255,255,255,.6)" stroke="currentColor" stroke-width="1.2"/><rect x="8" y="8" width="48" height="68" rx="3" fill="none" stroke="currentColor" stroke-width=".7" opacity=".7"/><svg x="14" y="22" width="36" height="24" viewBox="0 0 60 40"><use href="#lotus"/></svg><path d="M20 56h24M24 63h16" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+      <h3>Every guest sees what they are invited to</h3>
+      <p>Each guest sees what, and only what, they are invited to: the right events, the right invitation and the right RSVP form.</p>
+    </div>
+
+    <!-- Content types people can embed. Each <li> is one pill. -->
+    <div class="embeds">
+      <p>Have content you’ve already made? Embed it for one seamless experience.</p>
+      <ul>
+        <li>Images</li><li>Videos</li><li>Interactive web content</li><li>PowerPoints</li><li>PDFs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ WHY THIS SERVICE ============ -->
+<section class="why" id="why">
+  <div class="wrap cols">
+    <div class="inner">
+      <h2>Why this website service?</h2>
+      <div class="flourish left" aria-hidden="true"><svg class="lot" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg></div>
+      <p>I’m an experienced learning content designer, and I’ve worked at companies like Accenture and IBM. I’m also a mother who just got her daughter married.</p>
+      <p>I used one of the free wedding page sites on the market. It looked great but felt incredibly restrictive. I had a lot of content I’d developed and wanted to embed for a seamless experience, and I couldn’t. I had to find workarounds. Not to mention that most of these sites are hardly designed for the multi-event adventure experience that is a typical Indian wedding!</p>
+      <p>So I put both hats on and turned to AI to help me build a website that did exactly what I wanted. Now I can build yours.</p>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg class="paisley-lg" viewBox="0 0 100 140"><use href="#paisley"/></svg>
+      <svg class="lotus-lg" viewBox="0 0 60 40"><use href="#lotus"/></svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ EXAMPLES ============ -->
+<section class="examples center" id="examples">
+  <div class="wrap">
+    <h2>See it in action</h2>
+    <div class="flourish" aria-hidden="true"><svg class="lot" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg></div>
+    <p>Two live sites, built the same way yours would be.</p>
+    <!-- EDIT: change href (link), title and description of each card -->
+    <div class="cards">
+      <a class="card" href="https://anandamravi.github.io/sample-event/" target="_blank" rel="noopener">
+        <svg class="lot-card" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg>
+        <h3>Sample event</h3>
+        <p>A look at the layout and the features, with sample content.</p>
+        <span class="go">Open the site (new tab)</span>
+      </a>
+      <a class="card" href="https://anandamravi.github.io/Kshanam" target="_blank" rel="noopener">
+        <svg class="lot-card" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg>
+        <h3>Kshanam</h3>
+        <p>A wedding website built with this service.</p>
+        <span class="go">Open the site (new tab)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section class="contact center" id="contact">
+  <div class="wash a"></div><div class="wash b"></div>
+  <svg class="garland" aria-hidden="true"><rect width="100%" height="46" fill="url(#gl)"/></svg>
+  <svg class="mandala" viewBox="-100 -100 200 200" aria-hidden="true"><use href="#mandala" x="-100" y="-100" width="200" height="200"/></svg>
+  <div class="wrap">
+    <svg class="lot-top" viewBox="0 0 60 40" aria-hidden="true"><use href="#lotus"/></svg>
+    <h2>Ready for your own wedding website?</h2>
+    <p>Send me the names of the couple and I’ll start on the shell of your site and send you the Google Sheet template.</p>
+    <!-- EDIT: your email address is in the mailto: link below -->
+    <a class="btn btn-primary" href="mailto:anandamravi2011@gmail.com?subject=My%20wedding%20website">Let’s get your site started!</a>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<!-- EDIT: business or legal name -->
+<footer><div class="wrap">© <span id="yr">2026</span> RSVP. All rights reserved.</div></footer>
+
+<!-- ============ ART LIBRARY: decorative drawings used above. No need to edit. ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<path id="pl" d="M0 -60 C -8 -70 -8 -81 0 -89 C 8 -81 8 -70 0 -60Z"/>
+<path id="ps" d="M0 -34 C -9 -42 -9 -52 0 -58 C 9 -52 9 -42 0 -34Z"/>
+<path id="pc" d="M0 -6 C -4 -10 -4 -15 0 -20 C 4 -15 4 -10 0 -6Z"/>
+<pattern id="gl" width="112" height="46" patternUnits="userSpaceOnUse">
+  <path d="M0 4 Q28 24 56 4 Q84 24 112 4" fill="none" stroke="#bf9b5f" stroke-width="1.2"/>
+  <ellipse cx="56" cy="5" rx="7" ry="2.6" fill="#a9bba6" transform="rotate(-12 56 5)"/>
+  <ellipse cx="0" cy="5" rx="7" ry="2.6" fill="#a9bba6" transform="rotate(-12 0 5)"/>
+  <ellipse cx="112" cy="5" rx="7" ry="2.6" fill="#a9bba6" transform="rotate(-12 112 5)"/>
+  <path d="M28 14V27M84 14V27" stroke="#bf9b5f" stroke-width="1"/>
+  <circle cx="33.0" cy="33.0" r="3.4" fill="#e0a3b0"/>
+  <circle cx="30.5" cy="37.3" r="3.4" fill="#e0a3b0"/>
+  <circle cx="25.5" cy="37.3" r="3.4" fill="#e0a3b0"/>
+  <circle cx="23.0" cy="33.0" r="3.4" fill="#e0a3b0"/>
+  <circle cx="25.5" cy="28.7" r="3.4" fill="#e0a3b0"/>
+  <circle cx="30.5" cy="28.7" r="3.4" fill="#e0a3b0"/>
+  <circle cx="28" cy="33" r="2.6" fill="#c9a05a"/>
+  <circle cx="89.0" cy="33.0" r="3.4" fill="#ecc27a"/>
+  <circle cx="86.5" cy="37.3" r="3.4" fill="#ecc27a"/>
+  <circle cx="81.5" cy="37.3" r="3.4" fill="#ecc27a"/>
+  <circle cx="79.0" cy="33.0" r="3.4" fill="#ecc27a"/>
+  <circle cx="81.5" cy="28.7" r="3.4" fill="#ecc27a"/>
+  <circle cx="86.5" cy="28.7" r="3.4" fill="#ecc27a"/>
+  <circle cx="84" cy="33" r="2.6" fill="#c98a5a"/>
+  </pattern>
+</defs>
+<symbol id="mandala" viewBox="-100 -100 200 200" fill="none" stroke="currentColor" stroke-width="0.8">
+  <circle r="96"/>
+  <circle r="91" stroke-dasharray="1 3"/>
+  <use href="#pl" transform="rotate(0)"/>
+  <use href="#pl" transform="rotate(15)"/>
+  <use href="#pl" transform="rotate(30)"/>
+  <use href="#pl" transform="rotate(45)"/>
+  <use href="#pl" transform="rotate(60)"/>
+  <use href="#pl" transform="rotate(75)"/>
+  <use href="#pl" transform="rotate(90)"/>
+  <use href="#pl" transform="rotate(105)"/>
+  <use href="#pl" transform="rotate(120)"/>
+  <use href="#pl" transform="rotate(135)"/>
+  <use href="#pl" transform="rotate(150)"/>
+  <use href="#pl" transform="rotate(165)"/>
+  <use href="#pl" transform="rotate(180)"/>
+  <use href="#pl" transform="rotate(195)"/>
+  <use href="#pl" transform="rotate(210)"/>
+  <use href="#pl" transform="rotate(225)"/>
+  <use href="#pl" transform="rotate(240)"/>
+  <use href="#pl" transform="rotate(255)"/>
+  <use href="#pl" transform="rotate(270)"/>
+  <use href="#pl" transform="rotate(285)"/>
+  <use href="#pl" transform="rotate(300)"/>
+  <use href="#pl" transform="rotate(315)"/>
+  <use href="#pl" transform="rotate(330)"/>
+  <use href="#pl" transform="rotate(345)"/>
+  <use href="#ps" transform="rotate(0)"/>
+  <use href="#ps" transform="rotate(30)"/>
+  <use href="#ps" transform="rotate(60)"/>
+  <use href="#ps" transform="rotate(90)"/>
+  <use href="#ps" transform="rotate(120)"/>
+  <use href="#ps" transform="rotate(150)"/>
+  <use href="#ps" transform="rotate(180)"/>
+  <use href="#ps" transform="rotate(210)"/>
+  <use href="#ps" transform="rotate(240)"/>
+  <use href="#ps" transform="rotate(270)"/>
+  <use href="#ps" transform="rotate(300)"/>
+  <use href="#ps" transform="rotate(330)"/>
+  <circle r="31"/>
+  <circle r="22"/>
+  <use href="#pc" transform="rotate(0)"/>
+  <use href="#pc" transform="rotate(45)"/>
+  <use href="#pc" transform="rotate(90)"/>
+  <use href="#pc" transform="rotate(135)"/>
+  <use href="#pc" transform="rotate(180)"/>
+  <use href="#pc" transform="rotate(225)"/>
+  <use href="#pc" transform="rotate(270)"/>
+  <use href="#pc" transform="rotate(315)"/>
+  <circle r="3"/>
+</symbol>
+<symbol id="lotus" viewBox="0 0 60 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
+<path d="M30 37 C22 28 22 14 30 4 C38 14 38 28 30 37Z"/>
+<path d="M30 37 C20 34 12 24 12 12 C21 15 28 24 30 37Z"/>
+<path d="M30 37 C40 34 48 24 48 12 C39 15 32 24 30 37Z"/>
+<path d="M30 37 C16 38 5 32 1 22 C11 21 23 26 30 37Z"/>
+<path d="M30 37 C44 38 55 32 59 22 C49 21 37 26 30 37Z"/>
+</symbol>
+<symbol id="paisley" viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+<path d="M50 134 C8 124 2 70 38 40 C54 27 58 12 46 4 C84 12 96 58 80 96 C72 118 62 130 50 134Z"/>
+<path d="M50 120 C22 112 18 74 44 52"/>
+<path d="M57 112 C78 98 82 70 70 48"/>
+<circle cx="63" cy="30" r="2"/>
+  <circle cx="76" cy="54" r="2"/>
+  <circle cx="79" cy="78" r="2"/>
+<circle cx="38" cy="92" r="2.4"/>
+  <circle cx="50" cy="104" r="2.4"/>
+</symbol>
+</svg>
+
+
+<!-- Keeps the footer year up to date automatically -->
+<!-- Sizes the animation frame to fit the animation exactly -->
+<script>
+(function(){
+  var f = document.getElementById('demoFrame');
+  if (!f) return;
+  var maxH = 0;
+  function guess(){ return Math.round((f.clientWidth - 32) * 9 / 16 + 100); }
+  function reset(){ maxH = guess(); f.style.height = maxH + 'px'; }
+  window.addEventListener('message', function(e){
+    if (e.source !== f.contentWindow) return;
+    var h = e.data && e.data.sheetToSiteHeight;
+    if (typeof h === 'number' && h > maxH){ maxH = h; f.style.height = h + 'px'; }
+  });
+  window.addEventListener('resize', reset);
+  reset();
+})();
+</script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
